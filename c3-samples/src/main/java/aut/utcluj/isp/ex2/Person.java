@@ -9,11 +9,13 @@ public class Person {
 
     public Person(String firstName) {
         this.lastName = "";
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.firstName = firstName;
     }
 
     public Person(String firstName, String lastName) {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {

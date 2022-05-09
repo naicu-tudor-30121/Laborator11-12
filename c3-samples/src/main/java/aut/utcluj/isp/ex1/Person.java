@@ -1,5 +1,7 @@
 package aut.utcluj.isp.ex1;
 
+import java.util.Objects;
+
 /**
  * @author stefan
  */
@@ -27,31 +29,20 @@ public class Person {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
-
-        if (obj.getClass() != this.getClass()) {
-            return false;
-        }
-
-        final Person other = (Person) obj;
-        if ((this.firstName == null) ? (other.firstName != null) : !this.firstName.equals(other.firstName)) {
-            return false;
-        }
-
-        if ((this.lastName == null) ? (other.lastName != null) : !this.lastName.equals(other.lastName)) {
-            return false;
-        }
-
-        return true;
+        Person p = (Person) o;
+        return firstName.equals(p.firstName) &&
+                lastName.equals(p.lastName);
     }
     @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 53 * hash + (this.firstName != null ? this.firstName.hashCode() : 0);
-        hash = (53 * hash) + ((this.lastName != null) ? this.lastName.hashCode() : 0);
-        return hash;
+    public String toString() {
+        return this.firstName + " " + this.lastName;
     }
+
 }

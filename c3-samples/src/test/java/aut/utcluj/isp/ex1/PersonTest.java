@@ -23,4 +23,5 @@ public class PersonTest {
         assertTrue("Person instances should be equal", firstPerson.equals(secondPerson));
         assertEquals("Person information should be 'John Wick'", "John Wick", firstPerson.toString());
     }
+
 }

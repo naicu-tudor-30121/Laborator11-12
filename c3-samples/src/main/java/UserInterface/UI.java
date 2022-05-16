@@ -57,7 +57,7 @@ public class UI {
         
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("EMPLOYEE'S PERSONAL INFO");
+        frame.setTitle("EMPLOYEE'S PERSONAL INFO ");
         frame.pack();
         frame.setVisible(true);
         
